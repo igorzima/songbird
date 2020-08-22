@@ -1,0 +1,20 @@
+.header .list-group-item {
+  background-color: #008966;
+  border-color: #007c5d;
+  text-align: center;
+  color: #fff;
+  padding: 5px 0;
+}
+
+.header .list-group-item.active {
+  background-color: #00bc8c;
+  border-color: #007c5d;
+}
+
+.header .list-group-item:hover {
+  background-color: #008966;
+}
+
+.header .list-group-item.active:hover {
+  background-color: #00bc8c;
+}
