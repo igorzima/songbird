@@ -1,31 +1,17 @@
 import React from 'react';
 
-export default class ItemList extends React.Component {
-  state = {
-    activeItem: 0,
-  };
-
-  renderItems(arr) {
-    const { activeItem } = this.state;
-
-    return arr.map((array, idx) => {
-      if (activeItem === idx) {
-        return array.map(({ artist }) => {
-          return (
-            <li className="list-group-item" key={artist}>
-              {artist}
-            </li>
-          );
-        });
-      }
-
-      return null;
+export default function ItemList({ songData }) {
+  function renderItems(arr) {
+    return arr.map(({ artist, id }) => {
+      return (
+        <li className="list-group-item" key={id}>
+          {artist}
+        </li>
+      );
     });
   }
 
-  render() {
-    const items = this.renderItems(this.props.songData);
+  const items = renderItems(songData);
 
-    return <ul className="item-list list-group">{items}</ul>;
-  }
+  return <ul className="item-list list-group">{items}</ul>;
 }

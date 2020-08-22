@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import songsData from '../../data/data';
 
@@ -10,12 +10,18 @@ import ItemDetails from '../item-details';
 export default function App() {
   const [category, songData] = songsData;
 
+  const [activeItem] = useState(2);
+
+  const activeSongData = songData[activeItem];
+
+  console.log(activeSongData);
+
   return (
-    <div>
-      <Header category={category} />
+    <>
+      <Header category={category} activeItem={activeItem} />
       <Question />
-      <ItemList songData={songData} />
-      <ItemDetails songData={songData} />
-    </div>
+      <ItemList songData={activeSongData} />
+      <ItemDetails songData={activeSongData} />
+    </>
   );
 }
