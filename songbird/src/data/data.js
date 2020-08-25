@@ -3,7 +3,7 @@ const songsData = [
   [
     [
       {
-        id: 1,
+        id: 0,
         song: 'Numb',
         artist: 'Linkin Park',
         description:
@@ -12,7 +12,7 @@ const songsData = [
         audio: './audio/LinkinPark-Numb.mp3',
       },
       {
-        id: 2,
+        id: 1,
         song: 'Smells Like Teen Spirit',
         artist: 'Nirvana',
         description:
@@ -21,7 +21,7 @@ const songsData = [
         audio: './audio/Nirvana-SmellsLikeTeenSpirit.mp3',
       },
       {
-        id: 3,
+        id: 2,
         song: 'Bohemian Rhapsody',
         artist: 'Queen',
         description:
@@ -30,7 +30,7 @@ const songsData = [
         audio: './audio/Queen-BohemianRhapsody.mp3',
       },
       {
-        id: 4,
+        id: 3,
         song: 'Highway to Hell',
         artist: 'AC/DC',
         description:
@@ -39,7 +39,7 @@ const songsData = [
         audio: './audio/AC_DC-HighwaytoHell.mp3',
       },
       {
-        id: 5,
+        id: 4,
         song: 'Hey Jude',
         artist: 'The Beatles',
         description:
@@ -49,7 +49,7 @@ const songsData = [
         audio: './audio/TheBeatles-HeyJude.mp3',
       },
       {
-        id: 6,
+        id: 5,
         song: 'Boulevard of Broken Dreams',
         artist: 'Green Day',
         description:
@@ -60,7 +60,7 @@ const songsData = [
     ],
     [
       {
-        id: 1,
+        id: 0,
         song: 'Umbrella',
         artist: 'Rihanna',
         description:
@@ -69,7 +69,7 @@ const songsData = [
         audio: './audio/Rihanna-Umbrella.mp3',
       },
       {
-        id: 2,
+        id: 1,
         song: 'Halo',
         artist: 'Beyonce',
         description:
@@ -78,7 +78,7 @@ const songsData = [
         audio: './audio/Beyoncé-Halo.mp3',
       },
       {
-        id: 3,
+        id: 2,
         song: 'Cry me a river',
         artist: 'Justin Timberlake',
         description:
@@ -87,7 +87,7 @@ const songsData = [
         audio: './audio/JustinTimberlake-CryMeaRiver.mp3',
       },
       {
-        id: 4,
+        id: 3,
         song: 'Billie Jean',
         artist: 'Michael Jackson',
         description:
@@ -97,7 +97,7 @@ const songsData = [
         audio: './audio/MichaelJackson-BillieJean.mp3',
       },
       {
-        id: 5,
+        id: 4,
         song: 'Frozen',
         artist: 'Madonna',
         description:
@@ -106,7 +106,7 @@ const songsData = [
         audio: './audio/Madonna-Frozen.mp3',
       },
       {
-        id: 6,
+        id: 5,
         song: 'Do You Know? (The Ping Pong Song)',
         artist: 'Enrique Iglesias',
         description:
@@ -117,7 +117,7 @@ const songsData = [
     ],
     [
       {
-        id: 1,
+        id: 0,
         song: 'Lose Yourself',
         artist: 'Eminem',
         description:
@@ -126,7 +126,7 @@ const songsData = [
         audio: './audio/Eminem-LoseYourself.mp3',
       },
       {
-        id: 2,
+        id: 1,
         song: 'Humble',
         artist: 'Kendrick Lamar',
         description:
@@ -135,7 +135,7 @@ const songsData = [
         audio: './audio/KendrickLamar-HUMBLE.mp3',
       },
       {
-        id: 3,
+        id: 2,
         song: 'Stronger',
         artist: ' Kanye West',
         description:
@@ -144,7 +144,7 @@ const songsData = [
         audio: './audio/KanyeWest-Stronger.mp3',
       },
       {
-        id: 4,
+        id: 3,
         song: '99 Problems',
         artist: 'Jay-Z',
         description:
@@ -153,7 +153,7 @@ const songsData = [
         audio: './audio/Jay-Z-99Problems.mp3',
       },
       {
-        id: 5,
+        id: 4,
         song: 'In da Club',
         artist: '50 Cent',
         description:
@@ -162,7 +162,7 @@ const songsData = [
         audio: './audio/50Cent-InDaClub.mp3',
       },
       {
-        id: 6,
+        id: 5,
         song: 'Lollipop',
         artist: 'Lil Wayne',
         description:
@@ -173,7 +173,7 @@ const songsData = [
     ],
     [
       {
-        id: 1,
+        id: 0,
         song: 'The Thrill Is Gone',
         artist: 'B. B. King',
         description:
@@ -182,7 +182,7 @@ const songsData = [
         audio: './audio/B.B.King-TheThrillIsGone.mp3',
       },
       {
-        id: 2,
+        id: 1,
         song: 'Bright Lights',
         artist: 'Gary Clark Jr.',
         description: 'Песня американского исполнителя Gary Clark Jr. из альбома Blak and Blu.',
@@ -190,7 +190,7 @@ const songsData = [
         audio: './audio/GaryClark,Jr.-BrightLights.mp3',
       },
       {
-        id: 3,
+        id: 2,
         song: 'Bird on the Wire',
         artist: 'Joe Bonamassa',
         description:
@@ -199,7 +199,7 @@ const songsData = [
         audio: './audio/JoeBonamassa-BirdOnAWire.mp3',
       },
       {
-        id: 4,
+        id: 3,
         song: 'Who Says',
         artist: 'John Mayer',
         description:
@@ -208,7 +208,7 @@ const songsData = [
         audio: './audio/JohnMayer-WhoSays.mp3',
       },
       {
-        id: 5,
+        id: 4,
         song: 'My Father’s Son',
         artist: 'Joe Cocker',
         description:
@@ -217,7 +217,7 @@ const songsData = [
         audio: "./audio/JoeCocker-MyFather'sSon.mp3",
       },
       {
-        id: 6,
+        id: 5,
         song: 'Daughters',
         artist: 'John Mayer',
         description:
@@ -228,7 +228,7 @@ const songsData = [
     ],
     [
       {
-        id: 1,
+        id: 0,
         song: 'Escape Me',
         artist: 'Tiësto',
         description:
@@ -237,7 +237,7 @@ const songsData = [
         audio: './audio/Tiësto-EscapeMe.mp3',
       },
       {
-        id: 2,
+        id: 1,
         song: 'White Lies',
         artist: ' Paul van Dyk',
         description:
@@ -246,7 +246,7 @@ const songsData = [
         audio: './audio/PaulVanDyk-WhiteLies.mp3',
       },
       {
-        id: 3,
+        id: 2,
         song: 'In and Out of Love',
         artist: 'Armin van Buuren',
         description:
@@ -255,7 +255,7 @@ const songsData = [
         audio: './audio/ArminvanBuuren-InAndOutOfLove.mp3',
       },
       {
-        id: 4,
+        id: 3,
         song: 'Ready Steady Go',
         artist: 'Paul Oakenfold',
         description:
@@ -264,7 +264,7 @@ const songsData = [
         audio: './audio/PaulOakenfold-ReadySteadyGoVocals.mp3',
       },
       {
-        id: 5,
+        id: 4,
         song: 'Why Does My Heart Feel So Bad?',
         artist: 'Moby',
         description:
@@ -273,7 +273,7 @@ const songsData = [
         audio: './audio/Moby-WhyDoesMyHeartFeelsoBad.mp3',
       },
       {
-        id: 6,
+        id: 5,
         song: 'One and One',
         artist: 'Robert Miles',
         description:
@@ -284,7 +284,7 @@ const songsData = [
     ],
     [
       {
-        id: 1,
+        id: 0,
         song: 'Inside Your Heaven',
         artist: 'Carrie Underwood',
         description:
@@ -293,7 +293,7 @@ const songsData = [
         audio: './audio/CarrieUnderwood-InsideYourHeaven.mp3',
       },
       {
-        id: 2,
+        id: 1,
         song: 'The Climb',
         artist: 'Miley Cyrus',
         description:
@@ -302,7 +302,7 @@ const songsData = [
         audio: './audio/MileyCyrus-TheClimb.mp3',
       },
       {
-        id: 3,
+        id: 2,
         song: 'Back to Tennessee',
         artist: 'Billy Ray Cyrus',
         description:
@@ -311,7 +311,7 @@ const songsData = [
         audio: './audio/BillyRayCyrus-BackToTennessee.mp3',
       },
       {
-        id: 4,
+        id: 3,
         song: 'Love Story',
         artist: 'Taylor Swift',
         description:
@@ -320,7 +320,7 @@ const songsData = [
         audio: './audio/TaylorSwift-LoveStory.mp3',
       },
       {
-        id: 5,
+        id: 4,
         song: 'Speechless',
         artist: 'Dan + Shay',
         description:
@@ -329,7 +329,7 @@ const songsData = [
         audio: './audio/Dan+Shay-Speechless.mp3',
       },
       {
-        id: 6,
+        id: 5,
         song: 'Heaven',
         artist: 'Kane Brown',
         description:

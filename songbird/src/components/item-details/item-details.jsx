@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function ItemDetails({ songData }) {
-  function renderItems(item) {
-    const { id, song, artist, description, audio, image } = item;
+export default function ItemDetails({ songData, itemId }) {
+  function renderItems() {
+    const { id, song, artist, description, audio, image } = songData[itemId];
 
     return (
       <React.Fragment key={id}>
@@ -24,7 +24,8 @@ export default function ItemDetails({ songData }) {
     );
   }
 
-  const items = renderItems(songData);
+  const items =
+    itemId || itemId === 0 ? renderItems() : 'Послушайте плеер. Выберите песню из списка';
 
   return <div className="item-details jumbotron d-flex">{items}</div>;
 }

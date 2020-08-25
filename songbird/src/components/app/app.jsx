@@ -4,35 +4,28 @@ import songsData from '../../data/data';
 
 import Header from '../header';
 import Question from '../question';
-import ItemList from '../item-list';
-import ItemDetails from '../item-details';
+import Level from '../level';
 
 export default function App() {
+  function getRandomInteger(min, max) {
+    const rand = min + Math.random() * (max + 1 - min);
+
+    return Math.floor(rand);
+  }
+
+  const songId = getRandomInteger(0, 5);
+
   const [category, songData] = songsData;
 
-  const [activeItem, setActiveItem] = useState(0);
+  const [activeHeaderItem] = useState(0);
 
-  const activeSongData = songData[activeItem];
-
-  const changeItem = () => {
-    if (activeItem === category.length - 1) {
-      setActiveItem(0);
-    } else {
-      setActiveItem((prev) => (prev += 1));
-    }
-  };
+  const activeSongData = songData[activeHeaderItem];
 
   return (
     <>
-      <Header category={category} activeItem={activeItem} />
-      <Question songData={activeSongData[0]} />
-      <div className="d-flex">
-        <ItemList songData={activeSongData} />
-        <ItemDetails songData={activeSongData[0]} />
-      </div>
-      <button className="btn btn-warning" onClick={changeItem}>
-        Change active item
-      </button>
+      <Header category={category} activeItem={activeHeaderItem} />
+      <Question songData={activeSongData[songId]} />
+      <Level songData={activeSongData} songId={songId} />
     </>
   );
 }
