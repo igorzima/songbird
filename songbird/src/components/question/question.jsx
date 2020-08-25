@@ -14,7 +14,7 @@ export default function Question({ songData }) {
             <h4>*****</h4>
           </li>
           <li className="list-group-item">
-            <audio src={audio} controls />
+            <audio className="audio" src={audio} controls />
           </li>
         </ul>
       </div>

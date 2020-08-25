@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import './header.css';
 
-export default function Header({ category, activeItem }) {
-  const [score, setScore] = useState(0);
-
+export default function Header({ category, activeItem, count }) {
   function renderItems(arr) {
     return arr.map((item, idx) => {
       if (activeItem === idx) {
@@ -29,7 +27,7 @@ export default function Header({ category, activeItem }) {
     <header className="header">
       <div className="d-flex justify-content-between align-items-center">
         <h1>Songbird</h1>
-        <span>Score: {score}</span>
+        <span>Score: {count}</span>
       </div>
       <div>
         <ul className="list-group list-group-horizontal">{items}</ul>
