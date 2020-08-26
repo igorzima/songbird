@@ -4,16 +4,19 @@ import ItemList from '../item-list/item-list';
 import ItemDetails from '../item-details/item-details';
 import Row from '../row';
 
-export default function Level({ songData, songId, getCount }) {
+export default function Level({
+  songData,
+  songId,
+  getCount,
+  startNextLevel,
+  getIsCorrectAnswer,
+  isCorrectAnswer,
+  isNextLevel,
+}) {
   const [selectedItem, setSelectedItem] = useState(null);
-  const [isCorrectAnswer, setIsCorrectAnswer] = useState(null);
 
   const onItemSelected = (selectedItem) => {
     setSelectedItem(selectedItem);
-  };
-
-  const getIsCorrectAnswer = (isCorrect) => {
-    setIsCorrectAnswer(isCorrect);
   };
 
   const itemList = (
@@ -24,6 +27,7 @@ export default function Level({ songData, songId, getCount }) {
       getIsCorrectAnswer={getIsCorrectAnswer}
       correctAnswer={isCorrectAnswer}
       getCount={getCount}
+      isNextLevel={isNextLevel}
     />
   );
 
@@ -32,7 +36,11 @@ export default function Level({ songData, songId, getCount }) {
   return (
     <>
       <Row left={itemList} right={itemDetails} />
-      {isCorrectAnswer ? <button className="btn btn-block btn-primary">Next Level</button> : null}
+      {isCorrectAnswer ? (
+        <button className="btn btn-block btn-primary" onClick={startNextLevel}>
+          Next Level
+        </button>
+      ) : null}
     </>
   );
 }

@@ -15,23 +15,50 @@ function getRandomInteger(min, max) {
 export default function App() {
   const [category, songData] = songsData;
 
-  const [songId] = useState(getRandomInteger(0, 5));
-  const [activeHeaderItem] = useState(0);
+  const [songId, setSongId] = useState(getRandomInteger(0, 5));
+  const [activeHeaderItem, setActiveHeaderItem] = useState(0);
   const [count, setCount] = useState(0);
+  const [isCorrectAnswer, setIsCorrectAnswer] = useState(null);
+  const [isNextLevel, setIsNextLevel] = useState(false);
 
   const activeSongData = songData[activeHeaderItem];
 
+  const getIsCorrectAnswer = (isCorrect) => {
+    setIsCorrectAnswer(isCorrect);
+
+    if (isCorrect) {
+      setIsNextLevel(true);
+    }
+  };
+
   const getCount = (count) => {
     if (count) {
-      setCount(count);
+      setCount((prev) => prev + count);
     }
+  };
+
+  const startNextLevel = () => {
+    setActiveHeaderItem((prev) => prev + 1);
+    setIsCorrectAnswer(null);
+    setSongId(getRandomInteger(0, 5));
+    setIsNextLevel(false);
+
+    document.querySelectorAll('.li-btn').forEach((el) => el.classList.remove('correct', 'wrong'));
   };
 
   return (
     <>
       <Header category={category} activeItem={activeHeaderItem} count={count} />
       <Question songData={activeSongData[songId]} />
-      <Level songData={activeSongData} songId={songId} getCount={getCount} />
+      <Level
+        songData={activeSongData}
+        songId={songId}
+        getCount={getCount}
+        startNextLevel={startNextLevel}
+        isCorrectAnswer={isCorrectAnswer}
+        getIsCorrectAnswer={getIsCorrectAnswer}
+        isNextLevel={isNextLevel}
+      />
     </>
   );
 }

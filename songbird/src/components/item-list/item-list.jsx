@@ -9,6 +9,7 @@ export default function ItemList({
   getIsCorrectAnswer,
   correctAnswer,
   getCount,
+  isNextLevel,
 }) {
   const [count, setCount] = useState(5);
   let isCorrect = correctAnswer;
@@ -22,8 +23,10 @@ export default function ItemList({
       audio.pause();
 
       isCorrect = true;
+
+      setCount(5);
     } else {
-      if (!isCorrect) {
+      if (!isCorrect && !isNextLevel) {
         event.target.children[0].classList.add('wrong');
 
         if (count !== 0) {
@@ -43,7 +46,7 @@ export default function ItemList({
             onItemSelected(id);
             itemHandler(event, id);
             getIsCorrectAnswer(isCorrect);
-            getCount(isCorrect && count);
+            getCount(isCorrect && !isNextLevel && count);
           }}>
           <span className="li-btn"></span>
           {artist}
