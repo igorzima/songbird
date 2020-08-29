@@ -37,7 +37,12 @@ export default function Level({
     <>
       <Row left={itemList} right={itemDetails} />
       {isCorrectAnswer ? (
-        <button className="btn btn-block btn-primary" onClick={startNextLevel}>
+        <button
+          className="btn btn-block btn-primary"
+          onClick={() => {
+            startNextLevel();
+            setSelectedItem(null);
+          }}>
           Next Level
         </button>
       ) : null}

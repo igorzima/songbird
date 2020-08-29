@@ -137,7 +137,7 @@ const songsData = [
       {
         id: 2,
         song: 'Stronger',
-        artist: ' Kanye West',
+        artist: 'Kanye West',
         description:
           'Второй сингл с третьего студийного альбома американского хип-хоп артиста Канье Уэста. Песня содержит вокал песни «Harder, Better, Faster, Stronger» французского дуэта Daft Punk. На 50-й церемонии вручения премии «Грэмми» песня выиграла Грэмми за «Лучшее сольное рэп-исполнение».',
         image: 'https://avatars.yandex.net/get-music-content/142001/b6bf3e4e.a.6796491-1/200x200',
@@ -239,7 +239,7 @@ const songsData = [
       {
         id: 1,
         song: 'White Lies',
-        artist: ' Paul van Dyk',
+        artist: 'Paul van Dyk',
         description:
           'Выпущенный в июле 2007 года первый сингл с пятого студийного альбома Пола ван Дайка In Between. В песне приняла участие Джессика Сатта, бывшая участница Pussycat Dolls.',
         image: 'https://avatars.yandex.net/get-music-content/41288/be083e09.a.485397-1/200x200',
