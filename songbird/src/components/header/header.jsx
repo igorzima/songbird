@@ -27,9 +27,9 @@ export default function Header({ category, activeItem, count }) {
     <header className="header">
       <div className="d-flex justify-content-between align-items-center">
         <h1>Songbird</h1>
-        <span>Score: {count}</span>
+        <span className="score">Score: {count}</span>
       </div>
-      <div>
+      <div className="question__list">
         <ul className="list-group list-group-horizontal">{items}</ul>
       </div>
     </header>

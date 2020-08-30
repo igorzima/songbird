@@ -1,25 +1,31 @@
 import React from 'react';
 
+import AudioPlayer from '../audio-player/audioPlayer';
+
 export default function ItemDetails({ songData, itemId }) {
   function renderItems() {
     const { id, song, artist, description, audio, image } = songData[itemId];
 
     return (
       <React.Fragment key={id}>
-        <img className="song-image" src={image} alt="item" />
+        <div className="image__wrapper">
+          <img className="song-image" src={image} alt="item" />
+        </div>
 
         <div className="card-body">
           <ul className="list-group list-group-flush">
             <li className="list-group-item list-hover">
+              <h3>{artist}</h3>
+            </li>
+            <li className="list-group-item list-hover">
               <h4>{song}</h4>
             </li>
-            <li className="list-group-item list-hover">{artist}</li>
             <li className="list-group-item list-hover">
-              <audio src={audio} controls />
+              <AudioPlayer src={audio} />
             </li>
           </ul>
-          <p>{description}</p>
         </div>
+        <p className="description">{description}</p>
       </React.Fragment>
     );
   }

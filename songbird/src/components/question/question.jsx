@@ -1,5 +1,7 @@
 import React from 'react';
 
+import AudioPlayer from '../audio-player/audioPlayer';
+
 import './question.css';
 
 import Image from '../../speaker.svg';
@@ -8,8 +10,8 @@ export default function Question({ songData, isCorrectAnswer }) {
   const { artist, song, audio, image } = songData;
 
   return (
-    <div className="jumbotron d-flex">
-      <div className="image-wrapper">
+    <div className="jumbotron d-flex question-wrapper">
+      <div className="image__wrapper">
         {isCorrectAnswer ? (
           <img className="song-image" src={image} alt="song" />
         ) : (
@@ -19,10 +21,10 @@ export default function Question({ songData, isCorrectAnswer }) {
       <div className="card-body">
         <ul className="list-group list-group-flush">
           <li className="list-group-item list-hover">
-            <h4>{isCorrectAnswer ? `${artist} - ${song}` : '*****'}</h4>
+            <h2>{isCorrectAnswer ? `${artist} - ${song}` : '*****'}</h2>
           </li>
           <li className="list-group-item list-hover">
-            <audio className="audio" src={audio} controls />
+            <AudioPlayer src={audio} />
           </li>
         </ul>
       </div>

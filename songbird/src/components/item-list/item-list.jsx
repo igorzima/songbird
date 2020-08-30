@@ -15,7 +15,7 @@ export default function ItemList({
   let isCorrect = correctAnswer;
 
   const itemHandler = (event, id) => {
-    const audio = document.querySelector('.audio');
+    const audio = document.querySelector('.player');
 
     if (id === songId) {
       event.target.children[0].classList.add('correct');

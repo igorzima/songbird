@@ -1,15 +1,36 @@
-.song-image {
-  max-height: 200px;
+.question-wrapper {
+  margin: 25px 0;
 }
 
-.image-wrapper {
-  width: 200px;
-  height: 200px;
+.song-image {
+  max-height: 200px;
+  width: 100%;
+}
+
+.song-ico {
+  width: 80%;
+}
+
+.image__wrapper {
   background-color: #32383e;
   display: flex;
   justify-content: center;
+  width: 200px;
+  height: fit-content;
+  border-radius: 5px;
 }
 
 .list-hover:hover {
   background-color: #32383e;
+}
+
+.jumbotron {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-body .list-group-item {
+  background-color: transparent;
+  padding: 0.5rem 1.25rem;
+  border-bottom: 1px solid #32383e;
 }
