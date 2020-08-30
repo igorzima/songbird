@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AudioPlayer from '../audio-player/audioPlayer';
+// import AudioPlayer from '../audio-player/audioPlayer';
 
 export default function ItemDetails({ songData, itemId }) {
   function renderItems() {
@@ -21,7 +21,8 @@ export default function ItemDetails({ songData, itemId }) {
               <h4>{song}</h4>
             </li>
             <li className="list-group-item list-hover">
-              <AudioPlayer src={audio} />
+              {/* <AudioPlayer src={audio} /> */}
+              <audio src={audio} controls></audio>
             </li>
           </ul>
         </div>

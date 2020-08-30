@@ -68,7 +68,11 @@ export default function App() {
       ) : (
         <>
           <Header category={category} activeItem={activeHeaderItem} count={count} />
-          <Question songData={activeSongData[songId]} isCorrectAnswer={isCorrectAnswer} />
+          <Question
+            songData={activeSongData[songId]}
+            isCorrectAnswer={isCorrectAnswer}
+            isNextLevel={activeHeaderItem}
+          />
           <Level
             songData={activeSongData}
             songId={songId}

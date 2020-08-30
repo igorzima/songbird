@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import ItemList from '../item-list/item-list';
 import ItemDetails from '../item-details/item-details';
 import Row from '../row';
+import './level.css';
 
 export default function Level({
   songData,
@@ -38,7 +39,7 @@ export default function Level({
       <Row left={itemList} right={itemDetails} />
       {isCorrectAnswer ? (
         <button
-          className="btn btn-block btn-primary"
+          className="btn btn-block btn-primary btn-next"
           onClick={() => {
             startNextLevel();
             setSelectedItem(null);
