@@ -1,0 +1,37 @@
+.header .list-group-item {
+  background-color: #008966;
+  text-align: center;
+  color: #fff;
+  padding: 5px 0;
+  min-width: 130px;
+  width: 160px;
+  border: none;
+  border-radius: 0 !important;
+}
+
+.header .list-group-item.active {
+  background-color: #00bc8c;
+}
+
+.header .list-group-item:hover {
+  background-color: #008966;
+}
+
+.header .list-group-item.active:hover {
+  background-color: #00bc8c;
+}
+
+.header .list-group-horizontal {
+  flex-wrap: wrap;
+  border-color: #007c5d;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.score {
+  font-size: 2rem;
+}
+
+.question__list {
+  margin: 10px 0 0 0;
+}
